@@ -1,0 +1,531 @@
+:root {
+    --main-black: #2D2D2D;
+    --main-white: #FFFFFF;
+    --main-orange: #EDBE9D;
+    --main-pink: #EEC8C8;
+    --main-green: #384837;
+    --second-green: #3C9F36;
+    --main-bg: #F6F6F6;
+    --primary-black-elements: #C6C6C6;
+    --primary-silver: #6F6F6F;
+    --main-red: #BA3030;
+}
+
+* {
+    font-family: "SFProDisplay-Regular";
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--main-bg);
+}
+
+.header {
+    height: calc(79rem / 16);
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+
+    padding: 0 calc(80rem / 16);
+
+    border-bottom: solid calc(2rem / 16) var(--main-green);
+}
+
+.menu_left {
+    height: calc(79rem/16);
+
+    display: flex;
+    align-items: center;
+    gap: calc(40rem / 16);
+
+    font-size: calc(14rem / 16);
+    text-transform: uppercase;
+}
+
+.logo {
+    padding: calc(29rem / 16) calc(23rem / 16);
+
+    background-color: var(--main-green);
+    border-radius: 0 0 calc(32rem / 16) calc(32rem / 16);
+
+    font-family: "Wordefta";
+    font-size: calc(32rem / 16);
+    color: var(--main-white);
+}
+
+.menu_right {
+    height: calc(79rem / 16);
+
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: calc(24rem / 16);
+}
+
+.language_button {
+    max-height: calc(25rem / 16);
+    max-width: calc(65rem / 16);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: calc(4rem / 16) calc(24rem / 16);
+
+    border-radius: calc(25rem / 16);
+    border: solid calc(1rem / 16) var(--main-black);
+    box-sizing: border-box;
+    text-transform: uppercase;
+
+    font-size: calc(14rem / 16);
+}
+
+.cart_button {
+    position: relative;
+}
+
+.cart_indicator {
+    width: calc(6rem / 16);
+    height: calc(6rem / 16);
+    position: absolute;
+    top: -2px;
+    right: 0px;
+
+    border-radius: 100%;
+    background-color: #f00;
+}
+
+.main {
+    padding: 0 calc(80rem / 16);
+}
+
+.go_to_previous {
+    margin-top: calc(42rem / 16);
+    display: flex;
+    align-items: center;
+    gap: calc(8rem / 16);
+
+    font-size: calc(14rem / 16);
+    color: var(--primary-silver);
+}
+
+.page_info {
+    margin-bottom: calc(31rem / 16);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page_info>.page_title {
+    font-family: "Wordefta";
+    font-size: calc(40rem / 16);
+    color: var(--main-black);
+}
+
+
+
+.progressbar_wrapper {
+    width: calc(500rem / 16);
+    height: fit-content;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progressbar_wrapper>.point {
+    width: calc(20rem / 16);
+    aspect-ratio: 1 / 1;
+    border-radius: 100%;
+
+    background-color: var(--main-bg);
+    border: calc(1rem / 16) solid var(--primary-black-elements);
+    position: relative;
+}
+
+.progressbar_wrapper>.point.is_active {
+    width: calc(20rem / 16);
+    aspect-ratio: 1 / 1;
+    border-radius: 100%;
+
+    position: relative;
+
+    background-color: var(--main-bg);
+    border: calc(1rem / 16) solid var(--main-black);
+}
+
+.progressbar_wrapper>.point.is_active::before {
+    content: "";
+    position: absolute;
+
+    width: calc(8rem / 16);
+    aspect-ratio: 1 / 1;
+
+    background-color: var(--main-black);
+    border-radius: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.progressbar_wrapper>.point.is_done {
+    width: calc(20rem / 16);
+    aspect-ratio: 1 / 1;
+    border-radius: 100%;
+
+    position: relative;
+
+    background-color: var(--second-green);
+    border: calc(1rem / 16) solid var(--second-green);
+}
+
+.progressbar_wrapper>.point.is_done::before {
+    content: url('../icons/done.svg');
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-55%, -50%)
+}
+
+.progressbar_wrapper>.line {
+    flex-grow: 1;
+    height: calc(2rem / 16);
+    background-color: var(--primary-black-elements);
+}
+
+.progressbar_wrapper>.line.is_done {
+    background-color: var(--second-green);
+}
+
+
+.point-text {
+    position: absolute;
+    transform: translate(-50%, -18px);
+    top: 0;
+    left: 50%;
+    white-space: nowrap;
+    font-size: calc(14rem / 16);
+    color: var(--primary-black-elements);
+}
+
+.point-text.is_done {
+    color: var(--second-green);
+}
+
+.point-text.is_active {
+    color: var(--main-black);
+}
+
+.main_block {
+    display: grid;
+    grid-template-columns: 5fr 3fr 4fr;
+    gap: 24px;
+
+}
+
+.list_of_items {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: calc(16rem / 16) calc(24rem / 16);
+    border: calc(1rem / 16) solid var(--primary-black-elements);
+    border-radius: calc(8rem / 16);
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    gap: calc(32rem / 16);
+}
+
+.product>.product_info>.product_title {
+    font-family: "SFProDisplay-Bold";
+    font-size: calc(20rem / 16);
+    color: var(--main-black);
+}
+
+.product>.product_info>.cantidad {
+    font-family: "SFProDisplay-Regular";
+    font-size: calc(16rem / 16);
+    color: var(--primary-silver);
+}
+
+.product>.product_info>.cantidad>.highlighted {
+    font-family: "SFProDisplay-Semibold";
+    color: var(--main-black);
+}
+
+.list_of_items>.item>.product>.product_image {
+    width: calc(86rem / 16);
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: calc(8rem / 16);
+    position: 50% 50%;
+}
+
+.product_price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.product_price>.product_main_price {
+    font-family: "SFProDisplay-Bold";
+    font-size: calc(24rem / 16);
+    color: var(--main-black);
+}
+
+.product_price>.product_price_discount {
+    font-family: "SFProDisplay-Regular";
+    font-size: calc(14rem / 16);
+    color: var(--main-red);
+    text-decoration: line-through;
+}
+
+.product_price>.product_price_discount>.highlighted {
+    font-family: "SFProDisplay-Semibold";
+}
+
+.total_block {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: calc(42rem / 16) calc(24rem / 16);
+    border: calc(1rem / 16) solid var(--primary-black-elements);
+    border-radius: calc(8rem / 16);
+}
+
+.total_block>.subtotal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: calc(31rem / 16);
+}
+
+.total_block>.subtotal>.title_text {
+    font-size: calc(16rem / 16);
+    color: var(--primary-silver);
+}
+
+.total_block>.subtotal>.number {
+    font-size: calc(18rem / 16);
+    color: var(--main-black);
+}
+
+.total_block>.discount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: calc(24rem / 16);
+}
+
+.total_block>.discount>.title {
+    display: flex;
+    gap: calc(8rem / 16);
+    align-items: center;
+
+}
+
+.total_block>.discount>.title>.title_text {
+    font-size: calc(16rem / 16);
+    color: var(--main-red);
+}
+
+.total_block>.discount>.number {
+    font-size: calc(18rem / 16);
+    color: var(--main-red);
+}
+
+.divider {
+    border: calc(1rem / 16) solid var(--main-black);
+    border-radius: calc(1rem / 16);
+    opacity: 0.1;
+}
+
+.total_block>.total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: calc(24rem / 16);
+}
+
+.total_block>.total>.title_text {
+    font-family: "SFProDisplay-Semibold";
+    font-size: calc(18rem / 16);
+    color: var(--second-green);
+}
+
+.total_block>.total>.number {
+    font-family: "SFProDisplay-Semibold";
+    font-size: calc(24rem / 16);
+    color: var(--second-green);
+}
+
+.info {
+    padding: calc(32rem / 16) calc(24rem / 16);
+
+    background-color: var(--main-white);
+    border-radius: calc(8rem / 16);
+    filter: drop-shadow(0px 0px 16px rgba(0, 0, 0, 0.08));
+}
+
+.info>.title {
+    font-family: "Wordefta";
+    font-size: calc(24rem / 16);
+    margin-bottom: calc(24rem / 16);
+    color: var(--main-black);
+}
+
+.block {
+    display: flex;
+    gap: calc(8rem / 16);
+    flex-direction: column;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: calc(16rem / 16);
+}
+
+.block>.block_title {
+    font-size: calc(14rem / 16);
+    color: var(--main-black);
+}
+
+.block>.input_block {
+    padding: calc(16rem / 16);
+    border-radius: calc(8rem / 16);
+    border: solid 1px var(--primary-black-elements);
+    font-size: calc(16rem/16);
+}
+
+.block>.input_block:focus {
+    outline: none;
+}
+
+.block>.input_block::placeholder {
+    color: var(--primary-black-elements);
+}
+
+.info>.button {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: calc(24rem / 16) 0;
+    margin-top: calc(34rem / 16);
+
+    text-transform: uppercase;
+
+    background-color: var(--second-green);
+    color: var(--main-white);
+
+    border-radius: calc(8rem / 16);
+}
+
+.info>.additional_info {
+    margin-top: calc(16rem / 16);
+
+    font-size: calc(14rem / 16);
+    color: var(--primary-silver);
+    text-align: center;
+}
+
+.segura {
+    width: 100%;
+
+    display: flex;
+    gap: calc(8rem / 16);
+    align-items: center;
+    justify-content: center;
+
+    margin-top: calc(24rem / 16);
+
+    font-size: calc(14rem / 16);
+    color: var(--second-green);
+}
+
+.footer {
+    padding: calc(40rem / 16) calc(80rem / 16) calc(16rem / 16);
+
+    background-color: var(--main-white);
+    border-top: solid calc(2rem / 16) var(--main-green);
+    margin-top: calc(45rem / 16);
+}
+
+.footer_main_content {
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr repeat(4, max-content);
+    gap: calc(140rem / 16);
+}
+
+.media {
+    display: flex;
+    flex-direction: column;
+    gap: calc(15rem / 16);
+}
+
+.footer_logo {
+    font-family: "Wordefta";
+    font-size: calc(28rem / 16);
+    color: var(--main-black);
+}
+
+.media_buttons {
+    display: flex;
+    gap: calc(24rem / 16);
+}
+
+.footer_column {
+    display: flex;
+    flex-direction: column;
+    gap: calc(16rem / 16);
+}
+
+.footer_column>.item {
+    font-size: calc(14rem / 16);
+    color: var(--primary-silver);
+}
+
+.footer_column>.item.highlighted {
+    font-family: "SFProDisplay-Semibold";
+    font-size: calc(16rem / 16);
+    color: var(--main-black);
+}
+
+.footer_line {
+    width: 100%;
+    height: calc(1rem / 16);
+    border-radius: calc(1rem / 16);
+    background-color: var(--main-green);
+    margin: calc(32rem / 16) 0 calc(16rem / 16);
+}
+
+.footer_additional_content {
+    display: grid;
+    grid-template-columns: 1fr repeat(3, max-content);
+    gap: calc(62rem / 16);
+}
+
+.footer_additional_content {
+    font-size: calc(14rem / 16);
+    color: var(--primary-black-elements);
+
+}
+
+.footer_additional_content>.doubleline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

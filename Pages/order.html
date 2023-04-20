@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Stylesheets/styles.css">
+    <link rel="stylesheet" href="../Stylesheets/fonts.css">
+    <title>Order</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="menu_left">
+            <div class="menu_button">Home</div>
+            <div class="menu_button">Catalog</div>
+            <div class="menu_button">Contacts</div>
+            <div class="menu_button">Delivery</div>
+        </div>
+
+        <div class="logo">Formulafina</div>
+
+        <div class="menu_right">
+            <div class="language_button">Es</div>
+            <div class="search_button"><img src="../icons/search.svg"></div>
+            <div class="cart_button">
+                <img src="../icons/shopping-bag.svg">
+                <div class="cart_indicator"></div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="go_to_previous">
+            <img src="../icons/arrow-left.svg" alt="">
+            <p class="text">Volver a la cesta</p>
+        </div>
+        <div class="page_info">
+            <h1 class="page_title">Haga su pedido</h1>
+            <div class="progressbar_wrapper">
+                <div class="point is_done">
+                    <span class="point-text is_done">Carrito</span>
+                </div>
+
+                <div class="line is_done"></div>
+
+                <div class="point is_active">
+                    <span class="point-text is_active">Haga Su Pedido</span>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="point">
+                    <span class="point-text">Confirmación</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="main_block">
+            <div class="list_of_items">
+                <div class="item">
+                    <div class="product">
+                        <img src="https://picsum.photos/1000/1000?random=1" alt="" class="product_image">
+                        <div class="product_info">
+                            <p class="product_title">Reduslim</p>
+                            <p class="cantidad">Cantidad: <span class="highlighted">1 pieza</span></p>
+                        </div>
+                    </div>
+                    <div class="product_price">
+                        <p class="product_main_price">€39 c/u</p>
+                        <p class="product_price_discount">Antes <span class="highlighted">€78 c/u</span></p>
+                    </div>
+                </div>
+                <hr class="divider" style="margin: calc(16rem / 16) 0">
+                <div class="item">
+                    <div class="product">
+                        <img src="https://picsum.photos/1000/1000?random=2" alt="" class="product_image">
+                        <div class="product_info">
+                            <p class="product_title">Reduslim</p>
+                            <p class="cantidad">Cantidad: <span class="highlighted">1 pieza</span></p>
+                        </div>
+                    </div>
+                    <div class="product_price">
+                        <p class="product_main_price">€39 c/u</p>
+                        <p class="product_price_discount">Antes <span class="highlighted">€78 c/u</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="total_block">
+                <div class="subtotal">
+                    <p class="title_text">Subtotal</p>
+                    <p class="number">€78</p>
+                </div>
+
+                <div class="discount">
+                    <div class="title">
+                        <img src="../icons/discount-tag.svg">
+                        <p class="title_text">Descuento</p>
+                    </div>
+                    <p class="number">-€39</p>
+                </div>
+
+                <hr class="divider">
+
+                <div class="total">
+                    <p class="title_text">Total</p>
+                    <p class="number">€39</p>
+                </div>
+            </div>
+
+            <div>
+                <div class="info">
+                    <p class="title">Introduzca sus datos:</p>
+                    <div class="inputs">
+                        <div class="block" id="name">
+                            <p class="block_title">Introduzca su nombre</p>
+                            <input class="input_block" id="nameInput" placeholder="Maria Sozush">
+                        </div>
+
+                        <div class="block" id="phone_number">
+                            <p class="block_title">Introduzca su número de teléfono</p>
+                            <input class="input_block" id="phoneNumberInput" placeholder="+34 000 000 00 00">
+                        </div>
+
+                        <div class="block" id="phone_number">
+                            <p class="block_title">Introduzca su dirección de correo electrónico</p>
+                            <input class="input_block" id="phoneNumberInput" placeholder="info@gmail.com">
+                        </div>
+                    </div>
+                    <div class="button">
+                        Comprar ahora
+                    </div>
+                    <p class="additional_info">
+                        Luego de hacer click en COMPRAR un representante se comunicará con Ud. para confirmar su pedido.
+                    </p>
+                </div>
+                <div class="segura">
+                    <img src="../icons/square-lock.svg">
+                    <p class="text">Compra 100% Segura</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer_main_content">
+            <div class="media">
+                <span class="footer_logo">Formulafina</span>
+                <div class="media_buttons">
+                    <img src="../icons/inst.svg" alt="">
+                    <img src="../icons/facebook.svg" alt="">
+                    <img src="../icons/youtube.svg" alt="">
+                </div>
+            </div>
+
+            <div class="footer_column">
+                <span class="item highlighted">Mapa del sitio</span>
+                <span class="item">Inicio</span>
+                <span class="item">Catálogo</span>
+                <span class="item">Contactos</span>
+                <span class="item">Entrega</span>
+            </div>
+            <div class="footer_column">
+                <span class="item highlighted">Consultas Y Preguntas</span>
+                <span class="item">Contacto</span>
+                <span class="item">Preguntas frecuentes</span>
+            </div>
+            <div class="footer_column">
+                <span class="item highlighted">Selecciones</span>
+                <span class="item">Músculos y articulaciones</span>
+                <span class="item">Cuidado de la piel</span>
+                <span class="item">Nutrición y cuidado del cuerpo</span>
+                <span class="item">Salud general</span>
+                <span class="item">Salud femenina y masculina</span>
+            </div>
+            <div class="footer_column">
+                <span class="item highlighted">Sobre Nosotros</span>
+                <span class="item">Nuestra empresa</span>
+                <span class="item">Políticas de cookies</span>
+                <span class="item">Políticas de privacidad</span>
+                <span class="item">Términos y condiciones</span>
+            </div>
+        </div>
+        <div class="footer_line"></div>
+        <div class="footer_additional_content">
+            <span>© 2023 FormulaFina. Todos los derechos reservados.</span>
+            <span>2-14 Atkinson Rd, Taren Point. NSW. 2229</span>
+            <span>Mon-Thu 8:30 am - 4:45 pm, Fri 8:30 am - 2:30 pm</span>
+            <div class="doubleline">
+                <span>+34 649 254 3126</span>
+                <span>Dario35@hotmail.com</span>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
